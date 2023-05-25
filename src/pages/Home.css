@@ -1,0 +1,5 @@
+.mainBody{
+  /* height: calc(100vh- 70px);  since header's height was 70px */
+  display: flex;
+  overflow: hidden;
+}
