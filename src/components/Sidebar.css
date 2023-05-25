@@ -2,7 +2,7 @@
   height: 88vh;
   width: 250px;
   background-color: white;
-  overflow-y: scroll;
+  overflow-y: none;
   z-index: 100;
   /* display: none; */
   /* position: fixed; */
@@ -51,7 +51,7 @@ hr{
   height: auto;
   width: 250px;
   background-color: white;
-  overflow-y: scroll;
+  overflow-y: none;
   z-index: 100;
   position: absolute;
   border-right: 0.5px solid #e5e5e5;
