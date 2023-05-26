@@ -9,8 +9,7 @@ import "./VideoSection.css";
 import VideoItem from "./VideoItem";
 import VideoContext from "../Context/VideoContext";
 import { NavLink } from "react-router-dom";
-import ClipLoader from 'react-spinners/ClipLoader'
-
+import ClipLoader from "react-spinners/ClipLoader";
 
 const VideoSection = () => {
   const videoCtx = useContext(VideoContext);
@@ -20,7 +19,7 @@ const VideoSection = () => {
   const [loading, setIsLoading] = useState(false);
   const ref = useRef();
   videoCtx.list = videos;
-  
+
   const fetchVideosHandler = useCallback(async () => {
     try {
       setIsLoading(true);
@@ -85,20 +84,22 @@ const VideoSection = () => {
   let content;
 
   // adding spinner/loader
-  content = <a href="/">No More Pages. Reload.</a>
-  if(loading){
-    content = <ClipLoader
-    color='red'
-    loading={loading}
-    size={50}
-    aria-label="Loading Spinner"
-    data-testid="loader"
-  />
+  content = <a href="/">No More Pages. Reload.</a>;
+  if (loading) {
+    content = (
+      <ClipLoader
+        color="red"
+        loading={loading}
+        size={50}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    );
   }
 
   return (
     <div className="videos">
-      <h1>recommended</h1>
+      <h1 style={{ marginTop: "70px" }}>recommended</h1>
       <div className="videos_container">
         {/* single video starts */}
         {videos &&

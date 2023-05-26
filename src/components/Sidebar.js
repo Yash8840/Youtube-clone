@@ -18,7 +18,7 @@ const Sidebar = (props) => {
    }
   return (
    // checking if this sidebar belongs to the "SingleVideo" page
-    <div className={props.sidebar ? 'newSidebar mew' : 'sidebar'}>
+    <div className='sidebar'>
       <div className='sidebar_categories'>
         <div className='sidebar_category' onClick={homeHandler}>
            <HomeIcon/><span>Home</span>

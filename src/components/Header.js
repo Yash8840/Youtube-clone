@@ -13,7 +13,7 @@ const Header = (props) => {
   const toggleSidebarHandler = (e)=>{
     // checking if this header belongs to the "singleVideo page"
     if(props.sidebar){
-          document.querySelector('.newSidebar').classList.toggle('hide-sidebar');
+          document.querySelector('.sidebar').classList.toggle('hide-sidebar');
     }else{
       document.querySelector('.sidebar').classList.toggle('hide-sidebar');
     }
