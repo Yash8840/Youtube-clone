@@ -43,7 +43,7 @@
 .header_icons {
   display: flex;
 }
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .header_search {
     display: none;
   }
