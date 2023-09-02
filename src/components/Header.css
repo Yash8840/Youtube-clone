@@ -9,7 +9,7 @@
   align-items: center;
   height: 70px;
   padding: 15px;
-  z-index: 10000;
+  z-index: 100000;
 }
 .header_left {
   display: flex;
@@ -43,7 +43,7 @@
 .header_icons {
   display: flex;
 }
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .header_search {
     display: none;
   }
