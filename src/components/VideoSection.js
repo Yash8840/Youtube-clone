@@ -45,7 +45,7 @@ const VideoSection = () => {
     } catch (err) {
       console.log(err);
     }
-  }, [page]);
+  }, [page,videos]);
 
   useEffect(() => {
     fetchVideosHandler();
@@ -58,29 +58,6 @@ const VideoSection = () => {
     console.log(page);
   };
 
-  // (THIS IS INFINITE SCROLLING IMPLEMENTATION)
-  // Due to the IntersectionObserver API , as soon as the div containing the spinner/loader gets into visual Viewport, we apply "PAGINATION" and fetch the api again with a different page Number
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          console.log("visible+`");
-          changePageHandler();
-        }
-      },
-      { threshold: 1 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [ref]);
   let content;
 
   // adding spinner/loader
